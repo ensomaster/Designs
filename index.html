@@ -1,23 +1,47 @@
-<button class="glass-btn">Hover me</button>
-
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Graffiti UI Demo</title>
+<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
 <style>
-  .glass-btn{
-    --bg: rgba(255,255,255,0.08);
-    padding:10px 18px;
-    border-radius:12px;
-    border:1px solid rgba(255,255,255,0.18);
-    background: var(--bg);
-    color:#fff;
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    transition: transform .22s ease, box-shadow .22s ease, background .22s ease;
-    cursor:pointer;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
-    font-weight:600;
+  body{
+    margin:0;
+    font-family: 'Rock Salt', cursive;
+    background: url('https://i.ibb.co/ZdM9d3P/graffiti-wall.jpg') center/cover no-repeat fixed;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
   }
-  .glass-btn:hover{
-    transform: translateY(-6px) rotate(-1deg);
-    box-shadow: 0 18px 40px rgba(0,0,0,0.6), 0 0 20px rgba(255,255,255,0.04) inset;
-    background: linear-gradient(90deg, rgba(255,255,255,0.12), rgba(255,255,255,0.05));
+  .graffiti-card{
+    padding:20px;
+    max-width:320px;
+    background: rgba(0,0,0,0.65);
+    color:white;
+    border:3px solid #ff00ff;
+    box-shadow: 0 0 20px #00ffea, 0 0 40px #ff00ff;
+    backdrop-filter: blur(3px);
+    text-align:center;
+    transform: rotate(-2deg);
+  }
+  .graffiti-card h1{
+    font-size:1.8rem;
+    background: linear-gradient(90deg, #ff00ff, #00ffff, #ff9900);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom:10px;
+  }
+  .graffiti-card:hover{
+    transform: rotate(0deg) scale(1.05);
+    transition: 0.3s;
   }
 </style>
+</head>
+<body>
+  <div class="graffiti-card">
+    <h1>Street Vibes</h1>
+    <p>Break the rules, paint your style.</p>
+  </div>
+</body>
+</html>
